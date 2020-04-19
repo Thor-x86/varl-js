@@ -1,0 +1,39 @@
+{
+  "name": "varl",
+  "version": "0.1.0",
+  "description": "VARL (VARiable List) is simplest form of data transfer and configuration file format",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js --open",
+    "test": "echo \"No tests available for now\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thor-x86/varl-js.git"
+  },
+  "keywords": [
+    "most",
+    "simple",
+    "easiest",
+    "lightweight",
+    "file",
+    "storage",
+    "transport",
+    "format",
+    "config"
+  ],
+  "author": "Athaariq \"Eric\" Ardhiansyah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thor-x86/varl-js/issues"
+  },
+  "homepage": "https://github.com/Thor-x86/varl-js",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.2.0",
+    "mocha": "^7.1.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
