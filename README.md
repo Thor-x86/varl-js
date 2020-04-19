@@ -10,6 +10,7 @@ For more explanations, [see the documentation](https://github.com/Thor-x86/varl)
 ## Encoder & Decoder Information
 
 Implements .varl version: **1.0.x**
+
 Encoder & Decoder for JS version: **0.1.0**
 
 ## How to install?
