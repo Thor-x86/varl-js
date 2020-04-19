@@ -1,7 +1,8 @@
 # .varl v1.0 Encoder & Decoder for JS
 
 **What is .varl?**
-The simplest way to transfer data or store as configuration file. Here's the example
+
+It's a simplest way to transfer data or store as configuration file. Here's the example
 
     full name = Athaariq Ardhiansyah
 
