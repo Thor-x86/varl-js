@@ -244,6 +244,12 @@ function parseValue(input) {
         // If array, then:
         let varlArray = input.substr(1, input.length-2);
         output = decodeArray(varlArray);
+    } else if(input.startsWith("\"") && input.endsWith("\"")) {
+        // If string, then:
+        output = decodeString(input);
+    } else if(input.startsWith("\'") && input.endsWith("\'")) {
+        // If raw string, then:
+        output = decodeString(input);
     } else if(input == "true") {
         // If "true" boolean, then:
         output = true;
@@ -251,8 +257,17 @@ function parseValue(input) {
         // If "false" boolean, then:
         output = false;
     } else if(!isNaN(input)) {
-        // If a number, then:
-        output = parseFloat(input);
+        // If a number, then check if it's float or any else
+        if(input.includes(".") || input.includes("e")) {
+            // If float or scientific, then:
+            output = parseFloat(input);
+        } else if(input.startsWith("0o")) {
+            // If octal, then:
+            output = parseInt(input.substr(2), 8);
+        } else {
+            // If integer or hex, then:
+            output = parseInt(input);
+        }
     } else {
         // Otherwise will be assumed as string
         output = decodeString(input);
