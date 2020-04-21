@@ -1,6 +1,6 @@
 {
   "name": "varl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "VARL (VARiable List) is simplest form of data transfer and configuration file format",
   "main": "index.js",
   "scripts": {
