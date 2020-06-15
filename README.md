@@ -12,7 +12,7 @@ For more explanations, [see the documentation](https://github.com/Thor-x86/varl)
 
 Implements .varl version: **1.0.x**
 
-Encoder & Decoder for JS version: **0.1.1**
+Encoder & Decoder for JS version: **0.1.2**
 
 ## How to install?
 

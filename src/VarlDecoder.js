@@ -16,13 +16,18 @@ const VarlDecoder = {
     // NOTE: This function implements .sync(input) function
     //       into Promise. Modify sync function code will
     //       also modify this function
-    async : (input, callback) => {
+    async : (input, callback = null) => {
         let promise = new Promise(resolve => {
             let output = VarlDecoder.sync(input);
             resolve(output);
         });
 
-        promise.then(output => callback(output));
+        if(typeof(callback) == 'function') {
+            promise.then(output => {
+                callback(output);
+                return output;
+            });
+        }
 
         return promise;
     }

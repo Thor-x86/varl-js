@@ -31,7 +31,7 @@ module.exports = {
         // Check if someone confused encode with decode
         if(typeof(input) == "string") throw new TypeError("Did you mean .decodeSync(...)?");
 
-        return VarlEncoder.sync(input)
+        return VarlEncoder.sync(input);
     },
 
     /**
@@ -45,14 +45,14 @@ module.exports = {
      *  Convert from object into VARL-formatted string asynchronously
      * 
      *  @param {object} input Object that intended to be encoded
-     *  @param {encodeFinishCallback} callback On finish callback
+     *  @param {encodeFinishCallback} [callback] On finish callback
      *  @returns {Promise} Useful for "callback hell" prevention and catches the error
      */
     encode : (input, callback) => {
         // Check if someone confused encode with decode
         if(typeof(input) == "string") throw new TypeError("Did you mean .decode(...)?");
 
-        return VarlEncoder.async(input, callback)
+        return VarlEncoder.async(input, callback);
     },
 
     /**
@@ -65,7 +65,7 @@ module.exports = {
         // Check if someone confused decode with encode
         if(typeof(input) != "string") throw new TypeError("Did you mean .encodeSync(...)?");
 
-        return VarlDecoder.sync(input)
+        return VarlDecoder.sync(input);
     },
 
     /**
@@ -79,7 +79,7 @@ module.exports = {
      *  Convert from VARL-formatted string into object asynchronously
      * 
      *  @param {string} input VARL-formatted string
-     *  @param {decodeFinishCallback} callback On finish callback
+     *  @param {decodeFinishCallback} [callback] On finish callback
      *  @returns {Promise} Useful for "callback hell" prevention and catches the error
      */
     decode : (input, callback) => {
